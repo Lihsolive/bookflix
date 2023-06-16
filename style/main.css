@@ -1,140 +1,171 @@
 :root {
-    --vermelho: #E50914;
-    --preto: #141414;
+  --vermelho: #e50914;
+  --preto: #141414;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* elementos base */
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
 body {
-    background: black;
-    font-family: 'Helvetica', sans-serif;
-    color: white;
-
+  background: black !important;
+  font-family: "Helvetica", sans-serif;
+  color: white !important;
 }
 
-header .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
+/* Barra de navegação */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: black;
+  margin: 0 3em;
+}
+/* LOGO */
+.logo {
+  font-size: 2rem;
+  color: var(--vermelho);
+  font-weight: bold;
+}
+/* NAVBAR LINKS */
+.menu {
+  display: flex;
+  margin-right: 1em;
+  font-size: 1rem;
 }
 
-header .logo {
-    margin-left: 5px;
-    color: var(--vermelho);
-    font-family: 'Arial Black', Helvetica, sans-serif;
-    font-size: 40px;
-}
-header nav a {
-    text-decoration: none;
-    color: #aaa;
-    margin-right: 10px;
+.menu-link {
+  color: #aaa;
 }
 
-header nav a:hover {
-    color: #fff;
+.menu-link:hover {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: .6rem;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  user-select: none;
 }
 
 /* Livro principal */
 .livro-principal {
-    font-size: 16px;
-    background: linear-gradient(to right, rgba(0,0,0,100%) 30%,rgba(0, 0, 0, 0.3)), url('/img/background.png');
+  font-size: 16px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 100%) 30%,
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/img/background.png");
 
-    height: calc(100vh - 40px);
-    background-size: cover;
+  height: calc(100vh - 70px);
+  background-size: cover;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.livro-principal .descricao {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    width: 50%;
-    margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 2rem;
 }
 
 .livro-principal .titulo {
-    margin-top: 15%;
-    font-size: 40px;
-    width: 50%;
-    margin-left: 30px;
-    font-family: 'Trebuchet MS', Arial, sans-serif
+  margin-top: 6rem;
+  font-size: 3rem;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .livro-principal .subtitulo {
-    font-size: 40px;
-    font-weight: lighter;
-    width: 50%;
-    margin-left: 30px;
+  font-size: 2rem;
+  font-weight: lighter;
 }
 
-.botoes  {
-    margin-left: 30px;
+.livro-principal .descricao {
+  font-size: 1rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 50%;
+  line-height: 1.4em;
+}
+
+.botoes {
+  display: flex;
+  justify-content: start;
 }
 
 .botao {
-    background-color: rgba(255, 2, 15, 0.765);
-    border: none;
-    font-size: 15px;
-    color: var(--preto);
-    padding: 15px 30px;
-    font-weight: 600;
-    border-radius: 5px;
-    margin-right: 15px;
-
-    cursor: pointer;
-    transition: .3s ease all;
+  background-color: rgba(255, 2, 15, 0.765);
+  font-size: 1rem;
+  color: var(--preto);
+  font-weight: 600;
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s ease all;
 }
 
 .botao:hover {
-    background-color: rgba(255, 2, 15, 0.584);
+  background-color: rgba(255, 2, 15, 0.584);
 }
 
-.botao i{
-    margin-right: 8px;
+.botao i {
+  margin-right: 8px;
 }
 
 .container {
-    margin-left: 20px;
-}
-
-.filme-principal .container {
-    width: 60%;
+  margin-left: 20px;
 }
 
 .livro {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 .box-filme {
-    height: 100%;
-    width: 100%;
-    display: block;
-}
-
-.carrossel-livros {
-    margin: 30px 30px;
-    padding: 0 20px;
-    background-color: black;
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 .titulo-carrossel {
-    padding: 10px;
-    margin-top: 30px;
+    padding: 1rem;
+    margin-top: 2em;
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: 100;
 }
 
 .carrossel-livros {
-    margin-top: 5px;
+  margin: 3em;
+  padding: 0 20px;
+  background-color: black;
+  
+}
+
+.carrossel-livros {
+  margin-top: 5px;
 }
